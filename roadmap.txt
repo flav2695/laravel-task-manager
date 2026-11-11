@@ -1,0 +1,28 @@
+Complete project roadmap:
+
+Step	Implementation	                     Files
+1	Configure Laravel API and SQLite	    .env, routes/api.php
+2	Create Event model and migration	    Event.php, migration
+3	Create Zone model and migration	        Zone.php, migration
+4	Create Reservation model and migration	Reservation.php, migration
+5	Create Payment and Ticket models	    Models and migrations
+6	Define Eloquent relationships	        Model files
+7	Create event APIs	                    EventController.php
+8	Create reservation APIs	                ReservationController.php
+9	Prevent overselling	                    ReservationService.php
+10	Implement payment confirmation	        Payment controller and service
+11	Add reservation expiration	            Artisan command and scheduler
+12	Test using Postman	                    API requests and responses
+
+
+MySQL vs SQLite
+Feature	MySQL	SQLite
+Database server	Required	Not required
+Database storage	MySQL server	Single .sqlite file
+phpMyAdmin	Yes	No
+Laravel migrations	Yes	Yes
+Eloquent ORM	Yes	Yes
+CRUD APIs	Yes	Yes
+Transactions	Yes	Yes
+Concurrency	Better for multiple users	More limited writes
+lockForUpdate()	Supported with InnoDB	No equivalent row-level locking
